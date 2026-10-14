@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a1a0d">
+    <title>تسجيل الدخول | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE LOGIN-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="login-wrap">
+
+        <section class="login-card" id="loginGuest">
+            <div class="login-logo">🎵</div>
+            <h1 class="login-title">أهلاً بمودي العربي</h1>
+            <p class="login-sub">سجّل دخولك عشان تحفظ تقدمك وتنافس مع أصحابك</p>
+
+            <button class="login-btn-google" id="loginBtn" type="button">
+                <span class="login-google-icon">G</span>
+                <span class="login-google-text">تسجيل دخول بحساب Google</span>
+            </button>
+
+            <p class="login-note">🔒 ما منطلب كلمة سر — Google بتتكفل بالأمان</p>
+
+            <div class="login-benefits">
+                <div class="login-benefit">🪙 <span>عملاتك محفوظة أونلاين</span></div>
+                <div class="login-benefit">🔥 <span>Streak من أي جهاز</span></div>
+                <div class="login-benefit">🏆 <span>تنافس مع أصحابك</span></div>
+            </div>
+        </section>
+
+        <section class="login-card" id="loginUser" hidden>
+            <div class="login-avatar" id="userAvatar"></div>
+            <h1 class="login-title">أهلاً <span id="userName"></span>!</h1>
+            <p class="login-sub" id="userEmail"></p>
+
+            <button class="login-btn-continue" id="continueBtn" type="button">
+                ▶ متابعة للموقع
+            </button>
+            <button class="login-btn-logout" id="logoutBtn" type="button">
+                تسجيل خروج
+            </button>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأغاني | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="MUSIC-PAGE">
+
+    <!-- خلفية المود (صورة تتبدل من الجافاسكريبت) -->
+    <div class="bg-image" id="bgImage"></div>
+
+    <!-- الحالة 1: قائمة المودات -->
+    <section class="mood-container" id="moodMenu">
+        <a class="home-link" href="MOUDY.html">← الرئيسية</a>
+        <div class="big-title" id="bigTitle">MOUDY</div>
+        <div class="header-box">
+            <h1 class="section-title">كيف مودك الآن؟</h1>
+        </div>
+        <ul class="mood-list" id="moodList"></ul>
+    </section>
+
+    <!-- الحالة 2: الأغاني (تحل مكان القائمة) -->
+    <section class="songs-view" id="songsView" hidden>
+        <div class="topbar">
+            <a class="back-btn" href="MOUDY.html">الرئيسية</a>
+            <button class="back-btn" id="backBtn">☰ القائمة</button>
+            <button class="back-btn" id="playAllBtn" title="شغّل الكل">▶ الكل</button>
+            <button class="back-btn" id="shuffleBtn" title="فاجئني">🎲</button>
+            <a class="back-btn" href="playlists.html" title="قوائمي">📋</a>
+            <nav class="chips" id="chips" aria-label="المودات"></nav>
+        </div>
+    
+        <!-- 🎵 شريط أغنية اليوم -->
+        <section class="daily-song-bar" id="dailySongBar" hidden>
+            <div class="daily-song-icon">🎵</div>
+            <div class="daily-song-info">
+                <span class="daily-song-label">أغنية اليوم</span>
+                <span class="daily-song-title" id="dailySongTitle">...</span>
+            </div>
+            <button class="daily-song-play" id="dailySongPlay" type="button">▶ اسمع</button>
+            <div class="daily-song-timer">⏰ <span class="daily-countdown">00:00:00</span></div>
+        </section>
+
+                <!-- 🏆 شريط التقدم -->
+                <div class="points-hint-bar">
+                    <span class="points-hint-icon">🏆</span>
+                    <span class="points-hint-text">كل أغنية تسمعها = <strong>+100 نقطة</strong> نحو رسالة لمودي</span>
+                    <a href="goal.html" class="points-hint-link">شوف تقدمي ←</a>
+                </div>
+        
+        <div class="songs-head">
+            <h2 id="moodTitle"></h2>
+            <input type="search" class="search" id="search" placeholder="ابحث عن أغنية..." aria-label="ابحث عن أغنية">
+        </div>
+
+        <div class="video-grid" id="videoGrid"></div>
+        <button class="more-btn" id="moreBtn" hidden>عرض المزيد</button>
+    </section>
+    <!-- 🎵 شريط المشغل السفلي -->
+    <div class="music-bar" id="playerBar" hidden>
+        <div class="music-bar-info">
+            <img class="music-bar-thumb" id="playerThumb" alt="">
+            <div class="music-bar-meta">
+                <div class="music-bar-title" id="playerTitle">—</div>
+                <div class="music-bar-counter" id="playerCounter">0 / 0</div>
+            </div>
+        </div>
+        <div class="music-bar-controls">
+            <button class="mb-btn" id="pShuffle" title="خلط">🔀</button>
+            <button class="mb-btn" id="pPrev" title="السابق">⏮</button>
+            <button class="mb-btn mb-btn-main" id="pPlayPause" title="تشغيل/إيقاف">⏸</button>
+            <button class="mb-btn" id="pNext" title="التالي">⏭</button>
+            <button class="mb-btn" id="pRepeat" title="تكرار">🔁</button>
+            <button class="mb-btn" id="pWatch" title="عرض الفيديو">📺</button>
+        </div>
+        <button class="mb-close" id="pClose" title="إغلاق">✕</button>
+        <div class="music-yt-host" id="ytHostWrapper"><div id="musicYtPlayer"></div></div>
+    </div>
+
+    <!-- Modal الفيديو — خارج music-bar -->
+    <div class="video-modal" id="videoModal" hidden>
+        <button class="video-modal-close" id="videoModalClose" type="button" aria-label="إغلاق">✕</button>
+        <div class="video-modal-frame" id="videoModalFrame"></div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

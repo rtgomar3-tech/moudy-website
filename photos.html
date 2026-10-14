@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صور | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE PHOTOS-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap">
+        <h1 class="page-title">🖼️ صور</h1>
+        <p class="page-sub">اضغط على أي صورة لتكبيرها بـ 3D.</p>
+
+        <div class="wall" id="wall"></div>
+        <button class="more-btn" id="more" hidden>عرض المزيد</button>
+    </main>
+
+    <!-- 3D Viewer -->
+    <div class="viewer3d" id="viewer3d" hidden>
+        <button class="viewer-close" id="viewerClose" type="button" aria-label="إغلاق">✕</button>
+
+        <div class="viewer-stage" id="viewerStage">
+            <img id="viewerImg" alt="">
+        </div>
+
+        <div class="viewer-actions">
+            <button class="viewer-nav" id="viewerPrev" type="button" aria-label="السابق">‹</button>
+            <button class="viewer-action" id="viewerFavorite" type="button" aria-label="مفضلة" title="مفضلة">🔖</button>
+            <button class="viewer-action" id="viewerShare" type="button" aria-label="مشاركة" title="مشاركة">📤</button>
+            <button class="viewer-action" id="viewerDownload" type="button" aria-label="تحميل" title="تحميل">💾</button>
+            <button class="viewer-nav" id="viewerNext" type="button" aria-label="التالي">›</button>
+        </div>
+
+        <div class="viewer-hint">حرّك الماوس للتدوير 3D</div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

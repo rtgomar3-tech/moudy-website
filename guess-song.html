@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="خمّن الأغنية من مقطع صوتي قصير — لعبة من موقع مودي العربي">
+    <meta name="theme-color" content="#1a0d2e">
+    <title>خمّن الأغنية | مودي العربي</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+
+    <!-- Twemoji (نفس باقي الصفحات) -->
+    <script src="https://cdn.jsdelivr.net/npm/twemoji@14.0.2/dist/twemoji.min.js" crossorigin="anonymous"></script>
+</head>
+<body class="GUESS-SONG-PAGE">
+
+    <nav class="site-nav" id="siteNav"></nav>
+
+    <div class="gs-wrap">
+
+        <!-- ============ شاشة البداية ============ -->
+        <section id="gsStart">
+            <h1 class="page-title">🎵 خمّن الأغنية</h1>
+            <p class="page-sub">اسمع مقطع قصير واعرف اسم الأغنية من 4 خيارات</p>
+
+            <div class="level-grid">
+                <button class="level-card" data-level="easy" type="button">
+                    <span class="level-icon">🟢</span>
+                    <span class="level-title">سهل</span>
+                    <span class="level-meta">مقطع 7 ثواني · 20 سؤال</span>
+                </button>
+
+                <button class="level-card" data-level="medium" type="button">
+                    <span class="level-icon">🟡</span>
+                    <span class="level-title">متوسط</span>
+                    <span class="level-meta">مقطع 5.5 ثانية · 20 سؤال</span>
+                </button>
+
+                <button class="level-card" data-level="hard" type="button">
+                    <span class="level-icon">🔴</span>
+                    <span class="level-title">صعب</span>
+                    <span class="level-meta">مقطع 3.5 ثانية · 20 سؤال</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- ============ شاشة اللعب ============ -->
+        <section id="gsPlay" hidden>
+            <div class="memory-hud">
+                <div class="hud-item">
+                    <span class="hud-label">السؤال</span>
+                    <span class="hud-value" id="gsQNum">1 / 20</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">النقاط</span>
+                    <span class="hud-value" id="gsScore">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">🔥 Streak</span>
+                    <span class="hud-value" id="gsStreak">0</span>
+                </div>
+                <div class="hud-item" id="gsTimerBox">
+                    <span class="hud-label">الوقت</span>
+                    <span class="hud-value" id="gsTimer">20</span>
+                </div>
+            </div>
+
+            <!-- مشغل المقطع -->
+            <div class="gs-player">
+                <button class="gs-play-btn" id="gsPlayBtn" type="button" aria-label="تشغيل المقطع">
+                    <span class="gs-play-icon" id="gsPlayIcon">▶</span>
+                </button>
+                <div class="gs-player-info">
+                    <div class="gs-clip-bar"><div class="gs-clip-fill" id="gsClipFill"></div></div>
+                    <p class="gs-player-hint" id="gsHint">🎧 جاري تجهيز المقطع...</p>
+                </div>
+            </div>
+
+            <!-- الخيارات -->
+            <div class="gs-answers" id="gsAnswers"></div>
+
+            <!-- التغذية الراجعة -->
+            <div class="gs-feedback" id="gsFeedback"></div>
+
+            <button class="back-btn" id="gsBack" type="button" style="display:block;margin:24px auto 0;">← رجوع للمستويات</button>
+        </section>
+
+        <!-- ============ شاشة النهاية ============ -->
+        <section id="gsEnd" class="win-screen" hidden>
+            <div class="win-icon" id="gsEndIcon">🏆</div>
+            <h2 class="win-title" id="gsEndTitle">مبروك!</h2>
+            <div class="win-stats" id="gsEndStats"></div>
+            <div class="win-buttons">
+                <button class="btn" id="gsAgain" type="button">العب مرة تانية</button>
+                <button class="btn" id="gsEndBack" type="button">رجوع للمستويات</button>
+            </div>
+        </section>
+
+    </div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

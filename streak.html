@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔥 سلسلة الأيام | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE STREAK-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap streak-wrap">
+        <!-- الحالة الرئيسية -->
+        <section class="streak-hero">
+            <div class="streak-flame-big" id="streakFlame">🔥</div>
+            <div class="streak-number-big" id="streakNumber">0</div>
+            <div class="streak-label">أيام متتالية</div>
+
+            <button class="streak-btn-main" id="streakMainBtn" type="button">🔥 سجّل دخولك اليوم</button>
+
+            <div class="streak-msg" id="streakMsg"></div>
+        </section>
+
+        <!-- إحصائيات -->
+        <section class="streak-stats">
+            <div class="stat-card">
+                <span class="stat-icon">🏆</span>
+                <span class="stat-value" id="statBest">0</span>
+                <span class="stat-label">أعلى سلسلة</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📅</span>
+                <span class="stat-value" id="statTotal">0</span>
+                <span class="stat-label">مجموع الأيام</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">💎</span>
+                <span class="stat-value" id="statPoints">0</span>
+                <span class="stat-label">النقاط</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">❄️</span>
+                <span class="stat-value" id="statFreeze">متاح</span>
+                <span class="stat-label">حماية</span>
+            </div>
+        </section>
+
+        <!-- الشارات -->
+        <section class="streak-section">
+            <h2 class="streak-h2">🏅 شاراتك</h2>
+            <div class="badges-grid" id="badgesGrid"></div>
+        </section>
+
+        <!-- تقويم آخر 30 يوم -->
+        <section class="streak-section">
+            <h2 class="streak-h2">📅 آخر 30 يوم</h2>
+            <div class="streak-calendar" id="streakCalendar"></div>
+        </section>
+
+        <!-- الشارات القادمة -->
+        <section class="streak-section">
+            <h2 class="streak-h2">🎯 الشارات القادمة</h2>
+            <div class="milestones-grid" id="milestonesGrid"></div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

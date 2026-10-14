@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📊 مودي Wrapped | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE WRAPPED-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="wr-wrap">
+        <!-- فلتر الفترة -->
+        <div class="wr-filter">
+            <button class="wr-filter-btn active" data-range="all" type="button">✨ كل الوقت</button>
+            <button class="wr-filter-btn" data-range="year" type="button">📅 هذي السنة</button>
+            <button class="wr-filter-btn" data-range="month" type="button">🗓️ آخر 30 يوم</button>
+        </div>
+
+        <!-- Slider -->
+        <div class="wr-slider" id="wrSlider"></div>
+
+        <!-- أزرار التنقل -->
+        <div class="wr-nav">
+            <button class="wr-nav-btn" id="wrPrev" type="button" aria-label="السابق">‹</button>
+            <div class="wr-dots" id="wrDots"></div>
+            <button class="wr-nav-btn" id="wrNext" type="button" aria-label="التالي">›</button>
+        </div>
+
+        <!-- زر المشاركة -->
+        <button class="wr-share-btn" id="wrShare" type="button">
+            <span>📤</span> شارك الـ Wrapped
+        </button>
+
+        <p class="wr-footer">
+            🎵 من موقع مودي العربي — <span id="wrFrom">—</span>
+        </p>
+    </main>
+
+    <!-- شاشة الاحتفال (نهاية السنة) -->
+    <div class="wr-celebrate" id="wrCelebrate" hidden>
+        <div class="wr-celebrate-content">
+            <div class="wr-celebrate-icon">🎉</div>
+            <h2>سنة سعيدة مع مودي!</h2>
+            <p>شوف Wrapped تبعك</p>
+            <button class="wr-celebrate-btn" id="wrCelebrateBtn" type="button">▶ شوف Wrapped</button>
+            <button class="wr-celebrate-close" id="wrCelebrateClose" type="button">✕</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

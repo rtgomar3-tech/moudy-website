@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a1a0d">
+    <title>🏆 تقدمي نحو مودي | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE GOAL-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap goal-wrap">
+
+        <!-- Hero -->
+        <section class="goal-hero">
+            <div class="goal-badge">💌 رسالة لمودي</div>
+            <h1 class="page-title">تقدمي نحو مودي</h1>
+            <p class="page-sub">اجمع <strong>100,000 نقطة</strong> من الألعاب والأنشطة، ولما توصلها رح تقدر تبعت رسالة لمودي العربي وهو رح يرد عليك شخصياً!</p>
+        </section>
+
+        <!-- Progress Card -->
+        <section class="goal-card">
+            <div class="goal-card-top">
+                <div class="goal-icon-big">🏆</div>
+                <div class="goal-numbers">
+                    <div class="goal-current">
+                        <span class="points-value">0</span>
+                    </div>
+                    <div class="goal-total">من أصل 50,000 نقطة</div>
+                </div>
+                <div class="goal-percent-big">
+                    <span class="points-percent">0%</span>
+                </div>
+            </div>
+
+            <div class="goal-progress-bar">
+                <div class="goal-progress-fill points-fill"></div>
+            </div>
+
+            <div class="goal-remaining-text">
+                باقي <strong class="points-remaining">100,000</strong> نقطة
+            </div>
+        </section>
+
+        <!-- تعليمات -->
+        <section class="goal-info">
+            <h2>🎯 كيف أجمع النقاط؟</h2>
+            <div class="goal-info-grid">
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎧</div>
+                    <h3>سماع أغنية</h3>
+                    <p>+100 نقطة</p>
+                    <span class="goal-info-hint">الأعلى قيمة!</span>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎹</div>
+                    <h3>زمزم (بيانو)</h3>
+                    <p>+100 إلى +600</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎵</div>
+                    <h3>خمّن الأغنية</h3>
+                    <p>+80 إلى +250</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎼</div>
+                    <h3>رتّب الكلمات</h3>
+                    <p>+50 إلى +150</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🃏</div>
+                    <h3>ذاكرة الأغاني</h3>
+                    <p>+40 إلى +130</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎨</div>
+                    <h3>خمّن بالإيموجي</h3>
+                    <p>+30 إلى +100</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🔍</div>
+                    <h3>الكلمة المفقودة</h3>
+                    <p>+40 إلى +130</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎵</div>
+                    <h3>خمّن من الكلمات</h3>
+                    <p>+40 إلى +130</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">⚡</div>
+                    <h3>تحدي اليوم</h3>
+                    <p>+50 نقطة يومياً</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">📅</div>
+                    <h3>الدخول اليومي</h3>
+                    <p>+10 نقطة يومياً</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎁</div>
+                    <h3>صندوق اليوم</h3>
+                    <p>+30 نقطة</p>
+                </div>
+                <div class="goal-info-card">
+                    <div class="goal-info-icon">🎡</div>
+                    <h3>عجلة الحظ</h3>
+                    <p>+20 نقطة يومياً</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- قسم الرسالة -->
+        <section class="goal-message-section" id="goalMessageSection" hidden>
+            <h2>📩 ابعت رسالتك لمودي</h2>
+            <p>مبروك! وصلت للهدف. اكتب رسالتك لمودي العربي بحرية، وهو رح يقراها ويرد عليك.</p>
+
+            <form class="goal-message-form" id="goalMessageForm">
+                <textarea
+                    class="goal-message-input"
+                    id="goalMessageInput"
+                    maxlength="1000"
+                    placeholder="اكتب رسالتك لمودي هنا..."
+                    required></textarea>
+                <div class="goal-message-counter">
+                    <span id="goalMsgCount">0</span> / 1000
+                </div>
+                <button class="goal-message-send" type="submit" id="goalMessageSend">
+                    📤 إرسال الرسالة
+                </button>
+            </form>
+
+            <div class="goal-message-success" id="goalMessageSuccess" hidden>
+                <div class="goal-message-success-icon">✅</div>
+                <h3>وصلت رسالتك!</h3>
+                <p>رح يتواصل معك مودي قريباً إن شاء الله.</p>
+            </div>
+        </section>
+
+        <!-- قسم الحاجة للمزيد -->
+        <section class="goal-need-more" id="goalNeedMore">
+            <div class="goal-need-icon">🔒</div>
+            <h3>لساتك ما وصلت للهدف</h3>
+            <p>كمّل لعب واجمع <strong class="points-remaining">50,000</strong> نقطة إضافية عشان تفتح الرسالة.</p>
+            <a href="games.html" class="goal-need-btn">🎮 روح للألعاب</a>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+    /* منطق صفحة الهدف */
+    (function initGoalPage() {
+        var section = document.getElementById('goalMessageSection');
+        if (!section) return;
+
+        var needMore = document.getElementById('goalNeedMore');
+        var form = document.getElementById('goalMessageForm');
+        var input = document.getElementById('goalMessageInput');
+        var counter = document.getElementById('goalMsgCount');
+        var sendBtn = document.getElementById('goalMessageSend');
+        var successBox = document.getElementById('goalMessageSuccess');
+
+        function updateVisibility() {
+            if (!window.moudyPoints) return;
+            var reached = window.moudyPoints.hasReachedGoal();
+            section.hidden = !reached;
+            if (needMore) needMore.hidden = reached;
+        }
+
+        updateVisibility();
+        setInterval(updateVisibility, 2000);
+
+        /* Counter */
+        if (input) {
+            input.addEventListener('input', function () {
+                counter.textContent = input.value.length;
+            });
+        }
+
+        /* إرسال الرسالة */
+        if (form) {
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                var text = input.value.trim();
+                if (!text || text.length < 5) {
+                    alert('الرسالة قصيرة كتير!');
+                    return;
+                }
+
+                if (!window.moudyAuth || !window.moudyAuth.db) {
+                    alert('لازم تسجل دخول أول!');
+                    return;
+                }
+
+                var user = window.moudyAuth.getUser();
+                if (!user) {
+                    alert('لازم تسجل دخول أول!');
+                    return;
+                }
+
+                sendBtn.disabled = true;
+                sendBtn.textContent = '⏳ جاري الإرسال...';
+
+                var db = window.moudyAuth.db;
+                db.collection('messages').add({
+                    userId: user.uid,
+                    displayName: user.displayName || 'مستخدم',
+                    email: user.email || '',
+                    photoURL: user.photoURL || '',
+                    message: text,
+                    points: window.moudyPoints ? window.moudyPoints.get() : 0,
+                    sentAt: firebase.firestore.FieldValue.serverTimestamp(),
+                    status: 'unread'
+                }).then(function () {
+                    form.hidden = true;
+                    successBox.hidden = false;
+                }).catch(function (err) {
+                    console.warn('[Goal] فشل الإرسال:', err);
+                    sendBtn.disabled = false;
+                    sendBtn.textContent = '📤 إرسال الرسالة';
+                    alert('تعذّر الإرسال — حاول مرة تانية');
+                });
+            });
+        }
+
+    })();
+    </script>
+</body>
+</html>

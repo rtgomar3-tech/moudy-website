@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a1a0d">
+    <title>الترتيب | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE LEADERBOARD-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap">
+
+        <section class="lb-hero">
+            <div class="lb-badge">🏆 الترتيب العالمي</div>
+            <h1 class="page-title">لوحة الشرف</h1>
+            <p class="page-sub">شوف ترتيبك بين كل اللاعبين</p>
+        </section>
+
+        <!-- التبويبات -->
+        <div class="lb-tabs" id="lbTabs">
+            <button class="lb-tab active" data-tab="coins" type="button">
+                <span class="lb-tab-icon">🪙</span>
+                <span class="lb-tab-text">العملات</span>
+            </button>
+            <button class="lb-tab" data-tab="streak" type="button">
+                <span class="lb-tab-icon">🔥</span>
+                <span class="lb-tab-text">Streak</span>
+            </button>
+            <button class="lb-tab" data-tab="games" type="button">
+                <span class="lb-tab-icon">🎮</span>
+                <span class="lb-tab-text">الألعاب</span>
+            </button>
+        </div>
+
+        <!-- حاوي القائمة -->
+        <div class="lb-content" id="lbContent">
+            <div class="lb-loading" id="lbLoading">
+                <div class="lb-spinner"></div>
+                <p>جاري التحميل...</p>
+            </div>
+            <div class="lb-list" id="lbList" hidden></div>
+            <div class="lb-empty" id="lbEmpty" hidden>
+                <div class="lb-empty-icon">🏜️</div>
+                <h3>ما في لاعبين بعد</h3>
+                <p>كن أول واحد!</p>
+            </div>
+        </div>
+
+        <!-- ترتيبك -->
+        <section class="lb-my-rank" id="lbMyRank" hidden>
+            <div class="lb-my-title">ترتيبك</div>
+            <div class="lb-my-info" id="lbMyInfo"></div>
+        </section>
+
+        <!-- دعوة لتسجيل الدخول -->
+        <section class="lb-login-prompt" id="lbLoginPrompt" hidden>
+            <div class="lb-login-icon">🔑</div>
+            <h3>سجّل دخولك عشان تشوف ترتيبك</h3>
+            <a href="login.html?redirect=leaderboard.html" class="lb-login-btn">
+                تسجيل دخول
+            </a>
+        </section>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

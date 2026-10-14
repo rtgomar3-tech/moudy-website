@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 قوائمي | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE PLAYLISTS-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap playlists-wrap">
+        <!-- ===== عرض 1: شبكة القوائم ===== -->
+        <section id="plListView">
+            <div class="pl-header">
+                <div>
+                    <h1 class="page-title">🎵 قوائمي</h1>
+                    <p class="page-sub">جمّع أغانيك المفضلة بقوائم، وشغّلها وقت ما بدك.</p>
+                </div>
+                <button class="pl-new-btn" id="plNewBtn" type="button">
+                    <span>＋</span> قائمة جديدة
+                </button>
+            </div>
+
+            <div class="pl-grid" id="plGrid"></div>
+
+            <div class="pl-empty" id="plEmpty" hidden>
+                <div class="pl-empty-icon">🎵</div>
+                <h2>ما في قوائم بعد</h2>
+                <p>ابدأ بقائمة جديدة وضيف أغانيك المفضلة.</p>
+                <button class="pl-new-btn" id="plEmptyNewBtn" type="button">
+                    <span>＋</span> إنشاء أول قائمة
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== عرض 2: تفاصيل قائمة ===== -->
+        <section id="plDetailView" hidden>
+            <div class="pl-detail-top">
+                <button class="back-btn" id="plBackBtn" type="button">← كل القوائم</button>
+            </div>
+
+            <header class="pl-detail-header">
+                <div class="pl-detail-cover">
+                    <img id="plCoverImg" alt="">
+                </div>
+                <div class="pl-detail-info">
+                    <span class="pl-detail-label">قائمة تشغيل</span>
+                    <h1 class="pl-detail-name" id="plName">—</h1>
+                    <p class="pl-detail-meta">
+                        <span id="plCount">0</span> أغنية · <span id="plDuration">0 د</span>
+                    </p>
+                    <div class="pl-detail-actions">
+                        <button class="pl-action-btn pl-action-primary" id="plPlayAll" type="button">▶ تشغيل</button>
+                        <button class="pl-action-btn" id="plShuffle" type="button">🔀 خلط</button>
+                        <button class="pl-action-btn" id="plShare" type="button">📤 مشاركة</button>
+                        <button class="pl-action-btn" id="plRename" type="button">✏️ تسمية</button>
+                        <button class="pl-action-btn pl-action-danger" id="plDelete" type="button">🗑 حذف</button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="pl-songs-header">
+                <h2>الأغاني</h2>
+                <button class="pl-add-songs-btn" id="plAddSongsBtn" type="button">
+                    <span>＋</span> إضافة أغاني
+                </button>
+            </div>
+
+            <div class="pl-song-list" id="plSongList"></div>
+
+            <div class="pl-song-empty" id="plSongEmpty" hidden>
+                <p>القائمة فاضية. اضغط "إضافة أغاني" لتبدأ.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- نافذة اسم القائمة -->
+    <div class="pl-modal" id="plNameModal" hidden>
+        <div class="pl-modal-content">
+            <h3 id="plNameModalTitle">قائمة جديدة</h3>
+            <input type="text" class="pl-input" id="plNameInput" maxlength="40" placeholder="اسم القائمة...">
+            <div class="pl-modal-actions">
+                <button class="pl-modal-btn pl-modal-cancel" id="plNameCancel" type="button">إلغاء</button>
+                <button class="pl-modal-btn pl-modal-confirm" id="plNameConfirm" type="button">حفظ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- نافذة اختيار أغاني -->
+    <div class="pl-modal pl-modal-full" id="plPickModal" hidden>
+        <div class="pl-modal-content pl-pick-content">
+            <div class="pl-pick-header">
+                <h3>أضف أغاني</h3>
+                <button class="pl-modal-close" id="plPickClose" type="button">✕</button>
+            </div>
+            <input type="search" class="pl-input" id="plPickSearch" placeholder="ابحث عن أغنية...">
+            <div class="pl-pick-list" id="plPickList"></div>
+            <div class="pl-pick-footer">
+                <button class="pl-modal-btn pl-modal-confirm" id="plPickDone" type="button">تم</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- مشغل يوتيوب مخفي -->
+    <div id="plYtHost" class="pl-yt-host"></div>
+
+    <!-- شريط المشغل السفلي -->
+    <div class="music-bar" id="plPlayerBar" hidden>
+        <div class="music-bar-info">
+            <img class="music-bar-thumb" id="plPlayerThumb" alt="">
+            <div class="music-bar-meta">
+                <div class="music-bar-title" id="plPlayerTitle">—</div>
+                <div class="music-bar-counter" id="plPlayerCounter">0 / 0</div>
+            </div>
+        </div>
+        <div class="music-bar-controls">
+            <button class="mb-btn" id="plPrev" title="السابق">⏮</button>
+            <button class="mb-btn mb-btn-main" id="plPlayPause" title="تشغيل/إيقاف">⏸</button>
+            <button class="mb-btn" id="plNext" title="التالي">⏭</button>
+        </div>
+        <button class="mb-close" id="plPlayerClose" title="إغلاق">✕</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

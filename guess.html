@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 خمّن من الكلمات | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE GUESS-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="memory-wrap">
+        <!-- شاشة البداية -->
+        <section class="memory-screen" id="guessStart">
+            <h1 class="page-title">🎵 خمّن من الكلمات</h1>
+            <p class="page-sub">شوف البيت وخمّن من أي أغنية هو.</p>
+
+            <div class="level-grid">
+                <button class="level-card" data-level="easy" type="button">
+                    <span class="level-icon">🥉</span>
+                    <span class="level-title">سهل</span>
+                    <span class="level-meta">12 سؤال — 15 ثانية</span>
+                </button>
+                <button class="level-card" data-level="medium" type="button">
+                    <span class="level-icon">🥈</span>
+                    <span class="level-title">متوسط</span>
+                    <span class="level-meta">12 سؤال — 15 ثانية</span>
+                </button>
+                <button class="level-card" data-level="hard" type="button">
+                    <span class="level-icon">🥇</span>
+                    <span class="level-title">صعب</span>
+                    <span class="level-meta">12 سؤال — 15 ثانية</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- شاشة اللعب -->
+        <section class="memory-screen" id="guessPlay" hidden>
+            <div class="memory-hud">
+                <div class="hud-item">
+                    <span class="hud-label">السؤال</span>
+                    <span class="hud-value" id="guessQNum">1 / 12</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">النقاط</span>
+                    <span class="hud-value" id="guessScore">0</span>
+                </div>
+                <div class="hud-item" id="guessTimerBox">
+                    <span class="hud-label">الوقت</span>
+                    <span class="hud-value" id="guessTimer">15</span>
+                </div>
+            </div>
+
+            <div class="guess-prompt">🎤 من أي أغنية هالبيت؟</div>
+
+            <div class="guess-lyrics" id="guessLyrics"></div>
+
+            <div class="guess-answers" id="guessAnswers"></div>
+
+            <div class="guess-feedback" id="guessFeedback"></div>
+
+            <button class="back-btn" id="guessBack" type="button">← رجوع للمستويات</button>
+        </section>
+
+        <!-- شاشة النهاية -->
+        <section class="memory-screen win-screen" id="guessEnd" hidden>
+            <div class="win-icon" id="guessEndIcon">🏆</div>
+            <h2 class="win-title" id="guessEndTitle">مبروك!</h2>
+            <p class="win-stats" id="guessEndStats"></p>
+            <div class="win-buttons">
+                <button class="btn" id="guessAgain" type="button">العب مرة تانية</button>
+                <button class="back-btn" id="guessEndBack" type="button">المستويات</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

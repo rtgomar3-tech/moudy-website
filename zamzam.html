@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>🎹 زمزم | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE ZAMZAM-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <!-- ================= شاشة البداية ================= -->
+    <section class="zz-screen" id="zzStart">
+        <h1 class="page-title">🎹 زمزم</h1>
+        <p class="page-sub">اضغط على البلاطة قبل ما توصل للأسفل — نوتة موسيقية لكل ضغطة!</p>
+
+        <div class="zz-section">
+            <h3 class="zz-section-title">🎮 النمط</h3>
+            <div class="zz-modes">
+                <button class="zz-mode-card active" data-mode="classic" type="button">
+                    <span class="zz-mode-icon">🎵</span>
+                    <span class="zz-mode-name">كلاسيك</span>
+                    <span class="zz-mode-desc">3 أرواح · هادئ</span>
+                </button>
+                <button class="zz-mode-card" data-mode="arcade" type="button">
+                    <span class="zz-mode-icon">⚡</span>
+                    <span class="zz-mode-name">أركيد</span>
+                    <span class="zz-mode-desc">روح وحدة · سريع</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="zz-section">
+            <h3 class="zz-section-title">📊 المستوى</h3>
+            <div class="zz-levels">
+                <button class="zz-level-card active" data-level="1" type="button">
+                    <span class="zz-lv-num">1</span>
+                    <span class="zz-lv-name">سهل</span>
+                </button>
+                <button class="zz-level-card" data-level="2" type="button">
+                    <span class="zz-lv-num">2</span>
+                    <span class="zz-lv-name">متوسط</span>
+                </button>
+                <button class="zz-level-card" data-level="3" type="button">
+                    <span class="zz-lv-num">3</span>
+                    <span class="zz-lv-name">صعب</span>
+                </button>
+                <button class="zz-level-card" data-level="4" type="button">
+                    <span class="zz-lv-num">4</span>
+                    <span class="zz-lv-name">خبير</span>
+                </button>
+                <button class="zz-level-card" data-level="5" type="button">
+                    <span class="zz-lv-num">5</span>
+                    <span class="zz-lv-name">أسطوري</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="zz-section">
+            <h3 class="zz-section-title">🎵 الأغنية (اختياري)</h3>
+            <select class="zz-select" id="zzSongSelect">
+                <option value="">🔇 بدون موسيقى (نوتات بس)</option>
+            </select>
+            <p class="zz-hint">🎧 اختار أغنية واسمعها وأنت تلعب !</p>
+        </div>
+
+        <button class="zz-start-btn" id="zzStartBtn" type="button">▶ ابدأ اللعب</button>
+    </section>
+
+    <!-- ================= شاشة اللعب ================= -->
+    <section class="zz-screen zz-play-screen" id="zzPlay" hidden>
+        <div class="zz-hud">
+            <div class="zz-hud-item">
+                <span class="zz-hud-label">النقاط</span>
+                <span class="zz-hud-value" id="zzScore">0</span>
+            </div>
+            <div class="zz-hud-item zz-hud-combo">
+                <span class="zz-hud-label">Combo</span>
+                <span class="zz-hud-value" id="zzCombo">x1</span>
+            </div>
+            <div class="zz-hud-item zz-hud-lives">
+                <span class="zz-hud-label">الأرواح</span>
+                <span class="zz-hud-value" id="zzLives">❤❤❤</span>
+            </div>
+        </div>
+
+        <div class="zz-board" id="zzBoard">
+            <div class="zz-column" data-col="0"></div>
+            <div class="zz-column" data-col="1"></div>
+            <div class="zz-column" data-col="2"></div>
+            <div class="zz-column" data-col="3"></div>
+            <div class="zz-finish-line"></div>
+            <div class="zz-feedback" id="zzFeedback"></div>
+            <div class="zz-countdown" id="zzCountdown" hidden>3</div>
+        </div>
+
+        <div class="zz-game-actions">
+            <button class="zz-icon-btn" id="zzPauseBtn" type="button" title="إيقاف">⏸</button>
+            <button class="zz-icon-btn" id="zzMuteBtn" type="button" title="كتم">🔊</button>
+        </div>
+
+        <div class="zz-yt-mini" id="zzYtMini" hidden>
+            <div id="zzYtHost"></div>
+        </div>
+    </section>
+
+    <!-- ================= نافذة الإيقاف ================= -->
+    <div class="zz-pause-overlay" id="zzPause" hidden>
+        <div class="zz-pause-content">
+            <h2>⏸ إيقاف مؤقت</h2>
+            <div class="zz-pause-stats">
+                <div>النقاط: <strong id="zzPauseScore">0</strong></div>
+                <div>Combo: <strong id="zzPauseCombo">x1</strong></div>
+            </div>
+            <div class="zz-pause-buttons">
+                <button class="zz-btn zz-btn-primary" id="zzResume" type="button">▶ متابعة</button>
+                <button class="zz-btn" id="zzRestartBtn" type="button">🔄 إعادة</button>
+                <button class="zz-btn zz-btn-danger" id="zzQuitBtn" type="button">✕ خروج</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= شاشة النهاية ================= -->
+    <section class="zz-screen zz-end-screen" id="zzEnd" hidden>
+        <div class="zz-end-rank" id="zzEndRank">S</div>
+        <div class="zz-end-icon" id="zzEndIcon">🏆</div>
+        <h2 class="zz-end-title" id="zzEndTitle">مبروك!</h2>
+        <p class="zz-end-msg" id="zzEndMsg">أداء رائع!</p>
+
+        <div class="zz-end-stats">
+            <div class="zz-stat">
+                <span class="zz-stat-label">النقاط</span>
+                <span class="zz-stat-value" id="zzEndScore">0</span>
+            </div>
+            <div class="zz-stat">
+                <span class="zz-stat-label">أعلى Combo</span>
+                <span class="zz-stat-value" id="zzEndCombo">0</span>
+            </div>
+            <div class="zz-stat">
+                <span class="zz-stat-label">الدقة</span>
+                <span class="zz-stat-value" id="zzEndAcc">0%</span>
+            </div>
+            <div class="zz-stat">
+                <span class="zz-stat-label">⭐ Perfect</span>
+                <span class="zz-stat-value" id="zzEndPerfect">0</span>
+            </div>
+            <div class="zz-stat">
+                <span class="zz-stat-label">❌ Miss</span>
+                <span class="zz-stat-value" id="zzEndMiss">0</span>
+            </div>
+            <div class="zz-stat zz-stat-coins">
+                <span class="zz-stat-label">🪙 عملات</span>
+                <span class="zz-stat-value" id="zzEndCoins">+0</span>
+            </div>
+        </div>
+
+        <p class="zz-best" id="zzBest"></p>
+
+        <div class="zz-end-buttons">
+            <button class="zz-btn zz-btn-primary" id="zzAgainBtn" type="button">🔄 العب مرة تانية</button>
+            <button class="zz-btn" id="zzBackBtn" type="button">🏠 القائمة</button>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

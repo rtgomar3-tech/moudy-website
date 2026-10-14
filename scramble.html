@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎼 رتّب الكلمات | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE SCRAMBLE-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="memory-wrap">
+        <!-- شاشة البداية -->
+        <section class="memory-screen" id="scrStart">
+            <h1 class="page-title">🎼 رتّب الكلمات</h1>
+            <p class="page-sub">رتّب كلمات الأغنية بالترتيب الصحيح من الأغنية.</p>
+
+            <div class="level-grid">
+                <button class="level-card" data-level="easy" type="button">
+                    <span class="level-icon">🥉</span>
+                    <span class="level-title">سهل</span>
+                    <span class="level-meta">8 أسئلة — 45 ثانية</span>
+                </button>
+                <button class="level-card" data-level="medium" type="button">
+                    <span class="level-icon">🥈</span>
+                    <span class="level-title">متوسط</span>
+                    <span class="level-meta">10 أسئلة — 35 ثانية</span>
+                </button>
+                <button class="level-card" data-level="hard" type="button">
+                    <span class="level-icon">🥇</span>
+                    <span class="level-title">صعب</span>
+                    <span class="level-meta">12 سؤال — 25 ثانية</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- شاشة اللعب -->
+        <section class="memory-screen" id="scrPlay" hidden>
+            <div class="memory-hud">
+                <div class="hud-item">
+                    <span class="hud-label">السؤال</span>
+                    <span class="hud-value" id="scrQNum">1 / 8</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">النقاط</span>
+                    <span class="hud-value" id="scrScore">0</span>
+                </div>
+                <div class="hud-item" id="scrTimerBox">
+                    <span class="hud-label">الوقت</span>
+                    <span class="hud-value" id="scrTimer">45</span>
+                </div>
+            </div>
+
+            <div class="scr-badge">
+                <span class="scr-badge-icon">🎵</span>
+                <span class="scr-badge-name" id="scrSongName">—</span>
+            </div>
+
+            <div class="scr-instruction">👇 اضغط على الكلمات لترتيبها</div>
+
+            <!-- منطقة الترتيب -->
+            <div class="scr-answer-zone" id="scrAnswer">
+                <span class="scr-placeholder" id="scrPlaceholder">الكلمات المرتبة تظهر هنا</span>
+            </div>
+
+            <!-- الكلمات المبعثرة -->
+            <div class="scr-pool" id="scrPool"></div>
+
+            <!-- الأزرار -->
+            <div class="scr-actions">
+                <button class="scr-btn scr-btn-check" id="scrCheck" type="button">
+                    <span>✅</span> تحقق
+                </button>
+                <button class="scr-btn scr-btn-reset" id="scrReset" type="button">
+                    <span>🔄</span> إعادة
+                </button>
+            </div>
+
+            <div class="scr-feedback" id="scrFeedback"></div>
+
+            <button class="back-btn" id="scrBack" type="button">← رجوع للمستويات</button>
+        </section>
+
+        <!-- شاشة النهاية -->
+        <section class="memory-screen win-screen" id="scrEnd" hidden>
+            <div class="win-icon" id="scrEndIcon">🏆</div>
+            <h2 class="win-title" id="scrEndTitle">مبروك!</h2>
+            <p class="win-stats" id="scrEndStats"></p>
+            <div class="win-buttons">
+                <button class="btn" id="scrAgain" type="button">العب مرة تانية</button>
+                <button class="back-btn" id="scrEndBack" type="button">المستويات</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

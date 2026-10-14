@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="الحسابات الرسمية للفنان مودي العربي — يوتيوب، إنستغرام، فيسبوك، سبوتيفاي.">
+    <meta name="theme-color" content="#0a1a0d">
+    <title>الصفحات الرسمية | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE LINKS-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap">
+
+        <!-- ═══════════ Hero + عدّاد يوتيوب ═══════════ -->
+        <section class="links-hero">
+            <div class="links-hero-badge">🎬 القناة الرسمية</div>
+            <h1 class="page-title">مودي العربي</h1>
+            <p class="page-sub">تابع مودي على يوتيوب — وشوف الأرقام مباشرة</p>
+
+            <!-- عدّاد يوتيوب -->
+            <section class="yt-counter" id="ytCounter" hidden>
+                <h2 class="yt-counter-title">
+                    <span>📊 إحصائيات القناة</span>
+                    <span class="yt-live-dot" title="مباشر"></span>
+                </h2>
+                <div class="yt-counter-grid">
+                    <div class="yt-stat">
+                        <span class="yt-stat-icon">👥</span>
+                        <span class="yt-stat-value" id="ytSubs">—</span>
+                        <span class="yt-stat-label">مشترك</span>
+                    </div>
+                    <div class="yt-stat">
+                        <span class="yt-stat-icon">👁️</span>
+                        <span class="yt-stat-value" id="ytViews">—</span>
+                        <span class="yt-stat-label">مشاهدة</span>
+                    </div>
+                    <div class="yt-stat">
+                        <span class="yt-stat-icon">🎬</span>
+                        <span class="yt-stat-value" id="ytVideos">—</span>
+                        <span class="yt-stat-label">فيديو</span>
+                    </div>
+                </div>
+                <p class="yt-counter-note">⚡ يتحدّث تلقائياً</p>
+            </section>
+
+            <!-- زر فتح الصفحات الرسمية -->
+            <button class="links-toggle-btn" id="linksToggle" type="button" aria-expanded="false" aria-controls="linksContent">
+                <span class="links-toggle-icon">🔗</span>
+                <span class="links-toggle-text">افتح الصفحات الرسمية</span>
+                <span class="links-toggle-arrow">▾</span>
+            </button>
+        </section>
+
+        <!-- ═══════════ المحتوى المخفي: الروابط + QR ═══════════ -->
+        <section class="links-content" id="linksContent" hidden>
+
+            <div class="links-section-header">
+                <h2 class="links-section-title">الحسابات الرسمية</h2>
+                <p class="links-section-sub">حسابات مودي فقط — وجّه الكاميرا على الرمز لتفتح الحساب مباشرة</p>
+            </div>
+
+            <div class="link-grid" id="linkGrid"></div>
+
+            <section class="qr-final">
+                <h2>خذ الموقع معك</h2>
+                <p class="page-sub">امسح الرمز لتفتح موقع مودي العربي على أي جهاز.</p>
+                <div class="qr-box big" id="qrSite"></div>
+            </section>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

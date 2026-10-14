@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ تحدي اليوم | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE CHALLENGE-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap challenge-wrap">
+        <h1 class="page-title">⚡ تحدي اليوم</h1>
+        <p class="page-sub">تحدي جديد كل 24 ساعة. خلّصه واربح جوائز!</p>
+
+        <!-- كرت التحدي -->
+        <section class="challenge-hero">
+            <div class="challenge-icon-big" id="chIconBig">⚡</div>
+            <div class="challenge-text-big" id="chTextBig">جاري تحميل التحدي...</div>
+
+            <!-- شريط التقدم -->
+            <div class="challenge-progress-bar">
+                <div class="challenge-progress-fill" id="chFill"></div>
+            </div>
+
+            <div class="challenge-progress-info">
+                <span class="challenge-progress-text" id="chProgressText">0 / 3</span>
+                <span class="challenge-percent" id="chPercent">0%</span>
+            </div>
+
+            <!-- المكافأة -->
+            <div class="challenge-reward">
+                <span class="challenge-reward-title">🎁 المكافأة</span>
+                <div class="challenge-reward-items">
+                    <span class="challenge-reward-item">🪙 <strong class="challenge-reward-coins">+0</strong></span>
+                    <span class="challenge-reward-item">⭐ <strong class="challenge-reward-points">+0</strong></span>
+                </div>
+            </div>
+
+            <!-- زر الاستلام -->
+            <button class="challenge-claim-btn" id="challengeClaim" type="button" hidden>
+                🎁 استلم المكافأة
+            </button>
+
+            <!-- حالة الإكمال -->
+            <div class="challenge-done-msg" id="chDoneMsg" hidden>
+                ✅ خلّصت تحدي اليوم! ارجع بكرا لتحدي جديد
+            </div>
+
+            <!-- العدّاد -->
+            <div class="challenge-timer">
+                ⏰ التحدي الجاي بعد: <span id="chTimer">00:00:00</span>
+            </div>
+        </section>
+
+        <!-- إحصائيات اليوم -->
+        <section class="challenge-stats">
+            <h2>📊 نشاطك اليوم</h2>
+            <div class="challenge-stats-grid">
+                <div class="challenge-stat">
+                    <span class="challenge-stat-icon">🎮</span>
+                    <span class="challenge-stat-value" id="statGames">0</span>
+                    <span class="challenge-stat-label">ألعاب لعبتها</span>
+                </div>
+                <div class="challenge-stat">
+                    <span class="challenge-stat-icon">🎵</span>
+                    <span class="challenge-stat-value" id="statSongs">0</span>
+                    <span class="challenge-stat-label">أغاني سمعتها</span>
+                </div>
+                <div class="challenge-stat">
+                    <span class="challenge-stat-icon">🪙</span>
+                    <span class="challenge-stat-value" id="statCoins">0</span>
+                    <span class="challenge-stat-label">عملات جمعتها</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

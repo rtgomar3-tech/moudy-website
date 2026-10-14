@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a1a0d">
+    <title>البلياردو | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE BILLIARDS-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="bl-wrap">
+
+        <!-- ═══ شاشة البداية ═══ -->
+        <section class="bl-start" id="blStart">
+            <div class="bl-hero">
+                <div class="bl-badge">🎱 8-Ball احترافي</div>
+                <h1 class="page-title">البلياردو</h1>
+                <p class="page-sub">فيزياء واقعية + قوانين رسمية</p>
+            </div>
+
+            <h2 class="bl-section-title">🎮 الوضع</h2>
+            <div class="bl-modes">
+                <button class="bl-mode-card active" data-mode="local" type="button">
+                    <span class="bl-mode-icon">👥</span>
+                    <span class="bl-mode-name">شخصين</span>
+                    <span class="bl-mode-desc">على نفس الجهاز</span>
+                </button>
+                <button class="bl-mode-card" data-mode="ai" type="button">
+                    <span class="bl-mode-icon">🤖</span>
+                    <span class="bl-mode-name">ضد الكمبيوتر</span>
+                    <span class="bl-mode-desc">3 مستويات</span>
+                </button>
+            </div>
+
+            <div id="blAiSection" hidden>
+                <h2 class="bl-section-title">🤖 مستوى الخصم</h2>
+                <div class="bl-levels">
+                    <button class="bl-level-card active" data-level="easy" type="button">
+                        <span>🟢</span><span>سهل</span>
+                    </button>
+                    <button class="bl-level-card" data-level="medium" type="button">
+                        <span>🟡</span><span>متوسط</span>
+                    </button>
+                    <button class="bl-level-card" data-level="hard" type="button">
+                        <span>🔴</span><span>صعب</span>
+                    </button>
+                </div>
+            </div>
+
+            <h2 class="bl-section-title">🎨 الثيم</h2>
+            <div class="bl-themes">
+                <button class="bl-theme-card active" data-theme="pro" type="button">
+                    <span class="bl-theme-preview theme-pro"></span>
+                    <span>احترافي</span>
+                </button>
+                <button class="bl-theme-card" data-theme="moudy" type="button">
+                    <span class="bl-theme-preview theme-moudy"></span>
+                    <span>مودي</span>
+                </button>
+                <button class="bl-theme-card" data-theme="neon" type="button">
+                    <span class="bl-theme-preview theme-neon"></span>
+                    <span>نيون</span>
+                </button>
+            </div>
+
+            <button class="bl-start-btn" id="blStartBtn" type="button">
+                🎱 ابدأ اللعب
+            </button>
+        </section>
+
+        <!-- ═══ شاشة اللعب ═══ -->
+        <section class="bl-play" id="blPlay" hidden>
+
+            <!-- HUD علوي -->
+            <div class="bl-topbar">
+                <div class="bl-player-hud" id="blP1">
+                    <div class="bl-avatar">
+                        <img id="blP1Avatar" src="" alt="" onerror="this.style.display='none'">
+                        <span id="blP1Initial">P1</span>
+                    </div>
+                    <div class="bl-player-meta">
+                        <div class="bl-player-name" id="blP1Name">اللاعب 1</div>
+                        <div class="bl-ball-tracker" id="blP1Balls"></div>
+                    </div>
+                </div>
+
+                <div class="bl-vs">
+                    <div class="bl-turn-indicator" id="blTurn">1</div>
+                </div>
+
+                <div class="bl-player-hud" id="blP2">
+                    <div class="bl-player-meta bl-right">
+                        <div class="bl-player-name" id="blP2Name">اللاعب 2</div>
+                        <div class="bl-ball-tracker" id="blP2Balls"></div>
+                    </div>
+                    <div class="bl-avatar">
+                        <img id="blP2Avatar" src="" alt="" onerror="this.style.display='none'">
+                        <span id="blP2Initial">P2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- رسالة الحالة -->
+            <div class="bl-status" id="blStatus"></div>
+
+            <!-- منطقة اللعب -->
+            <div class="bl-stage">
+                <div class="bl-table-wrap">
+                    <canvas id="blCanvas"></canvas>
+                </div>
+            </div>
+
+            <!-- تحكم سفلي -->
+            <div class="bl-actions">
+                <button class="bl-action-btn" id="blQuitBtn" type="button">🚪 خروج</button>
+                <button class="bl-action-btn" id="blHelpBtn" type="button">❓ مساعدة</button>
+            </div>
+
+        </section>
+
+        <!-- ═══ شاشة النهاية ═══ -->
+        <section class="bl-end" id="blEnd" hidden>
+            <div class="bl-end-icon" id="blEndIcon">🏆</div>
+            <h2 class="bl-end-title" id="blEndTitle">مبروك!</h2>
+            <p class="bl-end-msg" id="blEndMsg"></p>
+            <div class="bl-end-buttons">
+                <button class="bl-btn-primary" id="blAgainBtn" type="button">العب مرة تانية</button>
+                <button class="bl-btn-secondary" id="blBackBtn" type="button">رجوع</button>
+            </div>
+        </section>
+
+        <!-- Modal مساعدة -->
+        <div class="bl-help-modal" id="blHelpModal" hidden>
+            <div class="bl-help-content">
+                <h3>🎱 كيف تلعب</h3>
+                <div class="bl-help-section">
+                    <h4>🎯 التسديد</h4>
+                    <p>اضغط واسحب على الطاولة للتصويب. أفلت للضرب.</p>
+                </div>
+                <div class="bl-help-section">
+                    <h4>✋ Ball-in-Hand</h4>
+                    <p>لما تدخل البيضاء أو تخالف، الخصم يحطها بأي مكان بالطاولة.</p>
+                </div>
+                <div class="bl-help-section">
+                    <h4>⚖️ القوانين</h4>
+                    <p>8-Ball: أول كرة تدخل تحدد مجموعتك. نظّف مجموعتك ثم 8.</p>
+                </div>
+                <button class="bl-help-close" id="blHelpClose" type="button">فهمت</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

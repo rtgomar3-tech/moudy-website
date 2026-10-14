@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>خمّن الأغنية بالإيموجي | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE EMOJI-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="emoji-wrap">
+        <!-- شاشة البداية -->
+        <section class="memory-screen" id="emojiStart">
+            <h1 class="page-title">🎨 خمّن الأغنية</h1>
+            <p class="page-sub">شوف الإيموجي وخمّن اسم الأغنية من 4 خيارات.</p>
+
+            <div class="level-grid">
+                <button class="level-card" data-level="easy" type="button">
+                    <span class="level-icon">🥉</span>
+                    <span class="level-title">سهل</span>
+                    <span class="level-meta">10 أسئلة — 25 ثانية</span>
+                </button>
+                <button class="level-card" data-level="medium" type="button">
+                    <span class="level-icon">🥈</span>
+                    <span class="level-title">متوسط</span>
+                    <span class="level-meta">10 أسئلة — 20 ثانية</span>
+                </button>
+                <button class="level-card" data-level="hard" type="button">
+                    <span class="level-icon">🥇</span>
+                    <span class="level-title">صعب</span>
+                    <span class="level-meta">10 أسئلة — 15 ثانية</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- شاشة اللعب -->
+        <section class="memory-screen" id="emojiPlay" hidden>
+            <div class="memory-hud">
+                <div class="hud-item">
+                    <span class="hud-label">السؤال</span>
+                    <span class="hud-value" id="emojiQNum">1 / 10</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">النقاط</span>
+                    <span class="hud-value" id="emojiScore">0</span>
+                </div>
+                <div class="hud-item" id="emojiTimerBox">
+                    <span class="hud-label">الوقت</span>
+                    <span class="hud-value" id="emojiTimer">25</span>
+                </div>
+            </div>
+
+            <div class="emoji-display" id="emojiDisplay"></div>
+
+            <div class="emoji-answers" id="emojiAnswers"></div>
+
+            <div class="emoji-feedback" id="emojiFeedback"></div>
+
+            <button class="back-btn" id="emojiBack" type="button">← رجوع للمستويات</button>
+        </section>
+
+        <!-- شاشة النهاية -->
+        <section class="memory-screen win-screen" id="emojiEnd" hidden>
+            <div class="win-icon" id="emojiEndIcon">🏆</div>
+            <h2 class="win-title" id="emojiEndTitle">مبروك!</h2>
+            <p class="win-stats" id="emojiEndStats"></p>
+            <div class="win-buttons">
+                <button class="btn" id="emojiAgain" type="button">العب مرة تانية</button>
+                <button class="back-btn" id="emojiEndBack" type="button">المستويات</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

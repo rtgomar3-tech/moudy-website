@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎁 صندوق اليوم | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE BOX-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap box-wrap">
+        <h1 class="page-title">🎁 صندوق اليوم</h1>
+        <p class="page-sub">صندوق واحد كل 24 ساعة. افتحه واكتشف المفاجأة!</p>
+
+        <!-- الصندوق -->
+        <div class="box-stage" id="boxStage">
+            <div class="box-glow"></div>
+            <div class="box-3d" id="box3d">
+                <div class="box-lid"></div>
+                <div class="box-body"></div>
+                <div class="box-lock">🔒</div>
+            </div>
+            <button class="box-open-btn" id="boxOpenBtn" type="button">
+                <span>🎁</span>
+                <small>افتح الصندوق</small>
+            </button>
+        </div>
+
+        <!-- العدّاد -->
+        <div class="box-timer-wrap">
+            <div class="box-timer-label">⏰ الصندوق الجاي بعد:</div>
+            <div class="box-timer" id="boxTimer">00:00:00</div>
+        </div>
+
+        <!-- الإحصائيات -->
+        <section class="box-stats">
+            <div class="stat-card">
+                <span class="stat-icon">🎁</span>
+                <span class="stat-value" id="statBoxesTotal">0</span>
+                <span class="stat-label">صناديق فتحتها</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">🔥</span>
+                <span class="stat-value" id="statBoxesStreak">0</span>
+                <span class="stat-label">أيام متتالية</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-value" id="statBoxesLegendary">0</span>
+                <span class="stat-label">مفاجآت أسطورية</span>
+            </div>
+        </section>
+
+        <!-- أنواع المفاجآت -->
+        <section class="box-types">
+            <h2>🎯 أنواع المفاجآت</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <span class="type-icon">💬</span>
+                    <span class="type-title">اقتباس</span>
+                    <span class="type-desc">من أغاني مودي</span>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">🎵</span>
+                    <span class="type-title">أغنية</span>
+                    <span class="type-desc">مقترحة لك</span>
+                </div>
+                <div class="type-card">
+                    <span class="type-icon">📖</span>
+                    <span class="type-title">معلومة</span>
+                    <span class="type-desc">عن مودي</span>
+                </div>
+                <div class="type-card legendary">
+                    <span class="type-icon">🌟</span>
+                    <span class="type-title">أسطوري</span>
+                    <span class="type-desc">مفاجأة نادرة</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>

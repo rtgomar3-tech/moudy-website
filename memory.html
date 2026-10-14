@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ذاكرة الأغاني | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE MEMORY-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="memory-wrap">
+        <!-- شاشة اختيار المستوى -->
+        <section class="memory-screen" id="memoryStart">
+            <h1 class="page-title">🃏 ذاكرة الأغاني</h1>
+            <p class="page-sub">لاقي كل صورة غلاف مع اسم الأغنية تبعه.</p>
+
+            <div class="level-grid">
+                <button class="level-card" data-level="easy" type="button">
+                    <span class="level-icon">🥉</span>
+                    <span class="level-title">سهل</span>
+                    <span class="level-meta">12 بطاقة — بلا وقت</span>
+                </button>
+                <button class="level-card" data-level="medium" type="button">
+                    <span class="level-icon">🥈</span>
+                    <span class="level-title">متوسط</span>
+                    <span class="level-meta">16 بطاقة — 90 ثانية</span>
+                </button>
+                <button class="level-card" data-level="hard" type="button">
+                    <span class="level-icon">🥇</span>
+                    <span class="level-title">صعب</span>
+                    <span class="level-meta">20 بطاقة — 60 ثانية</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- شاشة اللعب -->
+        <section class="memory-screen" id="memoryPlay" hidden>
+            <div class="memory-hud">
+                <div class="hud-item">
+                    <span class="hud-label">المحاولات</span>
+                    <span class="hud-value" id="memMoves">0</span>
+                </div>
+                <div class="hud-item">
+                    <span class="hud-label">الأزواج</span>
+                    <span class="hud-value" id="memPairs">0 / 0</span>
+                </div>
+                <div class="hud-item" id="memTimerBox">
+                    <span class="hud-label">الوقت</span>
+                    <span class="hud-value" id="memTimer">∞</span>
+                </div>
+            </div>
+
+            <div class="memory-board" id="memoryBoard"></div>
+
+            <button class="back-btn" id="memBack" type="button">← رجوع للمستويات</button>
+        </section>
+
+        <!-- شاشة الفوز -->
+        <section class="memory-screen win-screen" id="memoryWin" hidden>
+            <div class="win-icon" id="winIcon">🏆</div>
+            <h2 class="win-title" id="winTitle">مبروك!</h2>
+            <p class="win-stats" id="winStats"></p>
+            <div class="win-buttons">
+                <button class="btn" id="winAgain" type="button">العب مرة تانية</button>
+                <button class="back-btn" id="winBack" type="button">المستويات</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- موسيقى الخلفية (مخفية) -->
+    <div id="ytPlayer" aria-hidden="true"></div>
+
+    <script src="main.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+</body>
+</html>

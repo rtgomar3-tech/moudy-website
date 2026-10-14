@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⭐ عجلة النقاط | مودي العربي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="MOUDY.css">
+</head>
+<body class="SUB-PAGE WHEEL-PAGE">
+    <div class="site-nav" id="siteNav"></div>
+
+    <main class="page-wrap wheel-wrap">
+        <h1 class="page-title">⭐ عجلة النقاط</h1>
+        <p class="page-sub">دوّر العجلة يومياً واجمع نقاط نحو رسالة لمودي.</p>
+
+        <!-- كرت التقدم -->
+        <div class="coins-card">
+            <div class="coins-icon">🏆</div>
+            <div class="coins-info">
+                <span class="coins-label">تقدمك</span>
+                <span class="coins-value" id="pointsBig">0</span>
+            </div>
+            <div class="coins-goal">
+                <span class="goal-label">هدفك: رسالة لمودي</span>
+                <span class="goal-value">100,000 🏆</span>
+            </div>
+        </div>
+
+        <!-- العجلة -->
+        <div class="wheel-container">
+            <div class="wheel-pointer">▼</div>
+            <div class="wheel" id="wheel"></div>
+            <button class="wheel-btn-center" id="wheelBtn" type="button">
+                <span>⭐</span>
+                <small>دوّر</small>
+            </button>
+        </div>
+
+        <!-- معلومات -->
+        <div class="wheel-info">
+            <div class="wheel-msg" id="wheelMsg">دورتك المجانية اليومية جاهزة!</div>
+            <div class="wheel-timer">
+                ⏰ الدورة الجاية بعد: <span class="wheel-countdown" id="wheelCountdown">00:00:00</span>
+            </div>
+        </div>
+
+        <!-- الدورات الإضافية -->
+        <div class="extra-spins">
+            <h3>🎁 دورات إضافية</h3>
+            <p class="extra-sub">شاهد إعلان قصير للحصول على 5 دورات إضافية</p>
+            <button class="extra-btn" id="wheelAdBtn" type="button" disabled>
+                📺 قريباً
+            </button>
+        </div>
+
+        <!-- سجل الجوائز -->
+        <div class="prizes-info">
+            <h3>🎯 جوائز العجلة</h3>
+            <div class="prizes-list">
+                <div class="prize-item"><span>⭐</span> 50 نقطة</div>
+                <div class="prize-item"><span>⭐</span> 60 نقطة</div>
+                <div class="prize-item"><span>⭐</span> 75 نقطة</div>
+                <div class="prize-item"><span>⭐</span> 100 نقطة</div>
+                <div class="prize-item"><span>💎</span> 150 نقطة</div>
+                <div class="prize-item"><span>🎁</span> 200 نقطة</div>
+                <div class="prize-item"><span>🎡</span> دورة إضافية</div>
+                <div class="prize-item legendary"><span>👑</span> 1000 نقطة!</div>
+            </div>
+        </div>
+
+        <!-- الإحصائيات -->
+        <div class="wheel-stats">
+            <div class="stat-card">
+                <span class="stat-icon">🎡</span>
+                <span class="stat-value" id="statTotalSpins">0</span>
+                <span class="stat-label">مجموع الدورات</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">⭐</span>
+                <span class="stat-value" id="statTotalPoints">0</span>
+                <span class="stat-label">مجموع النقاط</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-icon">📅</span>
+                <span class="stat-value" id="statStreak">0</span>
+                <span class="stat-label">أيام متتالية</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
