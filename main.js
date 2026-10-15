@@ -792,8 +792,7 @@ const PHOTOS = [
         const start = shown;
         PHOTOS.slice(start, start + BATCH).forEach(function (p, i) {
             const img = document.createElement('img');
-            img.src = 'photos/thumbs/' + p.file;
-            img.width = p.w;
+            img.src = p.file;            img.width = p.w;
             img.height = p.h;
             img.loading = 'lazy';
             img.alt = 'مودي العربي';
@@ -807,7 +806,7 @@ const PHOTOS = [
     /* 3D Viewer */
     function openViewer(i) {
         current = (i + total) % total;
-        el.vImg.src = 'photos/full/' + PHOTOS[current].file;
+        el.vImg.src = PHOTOS[current].file;
         el.viewer.hidden = false;
         updateFavBtn();
         el.vStage.style.transform = '';
@@ -912,7 +911,7 @@ const PHOTOS = [
     /* تحميل */
     el.vDown.addEventListener('click', function () {
         const a = document.createElement('a');
-        a.href = 'photos/full/' + PHOTOS[current].file;
+        a.href = PHOTOS[current].file;
         a.download = PHOTOS[current].file;
         document.body.appendChild(a);
         a.click();
