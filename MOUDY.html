@@ -7,7 +7,6 @@
     <meta name="theme-color" content="#090c0a">
     <title>مودي العربي | الموقع الرسمي</title>
 
-    <!-- خط Cairo العربي -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
@@ -15,74 +14,90 @@
 </head>
 <body class="BBB">
 
-    <main class="container">
-        <header>
-            <a href="MOUDY.html" class="logo">MOUDY ALARBE</a>
-            <nav aria-label="القائمة الرئيسية">
-                <ul>
-                    <li><a href="music.html">الأغاني</a></li>
-                    <li><a href="photos.html">صور</a></li>
-                    <li><a href="podcast.html">بودكست</a></li>
-                    <li><a href="links.html">الصفحات الرسمية</a></li>
-                    <li><a href="games.html"> 🎮 الألعاب</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="home-wrap">
 
-        <section class="content">
+        <!-- ═══ البطاقة الرئيسية (بالصورة) ═══ -->
+        <main class="container">
+            <header>
+                <a href="MOUDY.html" class="logo">MOUDY ALARBE</a>
+                <nav aria-label="القائمة الرئيسية">
+                    <ul>
+                        <li><a href="music.html">الأغاني</a></li>
+                        <li><a href="photos.html">صور</a></li>
+                        <li><a href="podcast.html">بودكست</a></li>
+                        <li><a href="links.html">الصفحات الرسمية</a></li>
+                        <li><a href="games.html"> 🎮 الألعاب</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="content">
                 <h1>مودي العربي</h1>
                 <p>المنصة الرسمية للاستماع لأغاني ومقاطع الفنان مودي العربي وتصفح كلماته وأخباره.</p>
                 <a href="music.html" class="btn">استمع الآن</a>
             </section>
-    
-            <div class="quick-links">
-                <a href="music.html?mood=all" class="quick-link">
-                    <span class="quick-icon">🎵</span>
-                    <div class="quick-info">
-                        <span class="quick-label">أغنية اليوم</span>
-                        <span class="quick-countdown daily-countdown">00:00:00</span>
-                    </div>
-                </a>
-    
-                <a href="streak.html" class="quick-link quick-streak" id="streakHomeLink">
-                    <span class="quick-icon" id="streakHomeIcon">🔥</span>
-                    <div class="quick-info">
-                        <span class="quick-label">سلسلة أيامك</span>
-                        <span class="quick-countdown" id="streakHomeNum">0 يوم</span>
-                    </div>
-                </a>
-    
-                <a href="wheel.html" class="quick-link quick-wheel">
-                    <span class="quick-icon">🎡</span>
-                    <div class="quick-info">
-                        <span class="quick-label">عجلة الحظ</span>
-                        <span class="quick-countdown">🪙 <span class="coins-value">0</span></span>
-                    </div>
-                </a>
-    
-                <a href="box.html" class="quick-link quick-box" id="boxHomeLink">
-                    <span class="quick-icon" id="boxHomeIcon">🎁</span>
-                    <div class="quick-info">
-                        <span class="quick-label">صندوق اليوم</span>
-                        <span class="quick-countdown" id="boxHomeStatus">افتحه!</span>
-                    </div>
-                </a>
-                <a href="wrapped.html" class="quick-link quick-wrapped" style="background:linear-gradient(135deg,rgba(30,215,96,0.15),rgba(157,78,221,0.15)) !important;border:2px solid rgba(30,215,96,0.4) !important;">
-                    <span class="quick-icon">📊</span>
-                    <div class="quick-info">
-                        <span class="quick-label">مودي Wrapped</span>
-                        <span class="quick-sub">إحصائياتك مع مودي</span>
-                    </div>
-                </a>
-                <a href="challenge.html" class="quick-link quick-challenge" id="challengeHomeLink">
-                    <span class="quick-icon" id="challengeHomeIcon">⚡</span>
-                    <div class="quick-info">
-                        <span class="quick-label">تحدي اليوم</span>
-                        <span class="quick-countdown" id="challengeHomeStatus">...</span>
-                    </div>
-                </a>
-            </div>
-    </main>
+        </main>
+
+        <!-- ═══ شبكة البطاقات (برّا الصورة) ═══ -->
+        <div class="quick-links">
+            <a href="music.html?mood=all" class="quick-link">
+                <span class="quick-icon">🎵</span>
+                <div class="quick-info">
+                    <span class="quick-label">أغنية اليوم</span>
+                    <span class="quick-countdown daily-countdown">00:00:00</span>
+                </div>
+            </a>
+
+            <a href="streak.html" class="quick-link quick-streak" id="streakHomeLink">
+                <span class="quick-icon" id="streakHomeIcon">🔥</span>
+                <div class="quick-info">
+                    <span class="quick-label">سلسلة أيامك</span>
+                    <span class="quick-countdown" id="streakHomeNum">0 يوم</span>
+                </div>
+            </a>
+
+            <a href="wheel.html" class="quick-link quick-wheel">
+                <span class="quick-icon">🎡</span>
+                <div class="quick-info">
+                    <span class="quick-label">عجلة الحظ</span>
+                    <span class="quick-countdown">🏆 <span class="points-value">0</span></span>
+                </div>
+            </a>
+
+            <a href="box.html" class="quick-link quick-box" id="boxHomeLink">
+                <span class="quick-icon" id="boxHomeIcon">🎁</span>
+                <div class="quick-info">
+                    <span class="quick-label">صندوق اليوم</span>
+                    <span class="quick-countdown" id="boxHomeStatus">افتحه!</span>
+                </div>
+            </a>
+
+            <a href="wrapped.html" class="quick-link quick-wrapped" style="background:linear-gradient(135deg,rgba(30,215,96,0.15),rgba(157,78,221,0.15)) !important;border:2px solid rgba(30,215,96,0.4) !important;">
+                <span class="quick-icon">📊</span>
+                <div class="quick-info">
+                    <span class="quick-label">مودي Wrapped</span>
+                    <span class="quick-sub">إحصائياتك مع مودي</span>
+                </div>
+            </a>
+
+            <a href="challenge.html" class="quick-link quick-challenge" id="challengeHomeLink">
+                <span class="quick-icon" id="challengeHomeIcon">⚡</span>
+                <div class="quick-info">
+                    <span class="quick-label">تحدي اليوم</span>
+                    <span class="quick-countdown" id="challengeHomeStatus">...</span>
+                </div>
+            </a>
+
+            <a href="goal.html" class="quick-link quick-goal" id="goalHomeLink">
+                <span class="quick-icon">🏆</span>
+                <div class="quick-info">
+                    <span class="quick-label">تقدمي نحو مودي</span>
+                    <span class="quick-countdown">🏆 <span class="points-value">0</span> / 100,000</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
 
 <script src="main.js"></script>
 
