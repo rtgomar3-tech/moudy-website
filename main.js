@@ -198,15 +198,64 @@ const SONGS = [
             const btn = document.createElement('button');
             btn.type = 'button';
             btn.textContent = mood.label;
+
+            /* 🖥️ كمبيوتر: هوفر يظهر الصورة */
             btn.addEventListener('mouseenter', () => {
                 setBackground(mood, false);
                 el.bigTitle.textContent = mood.label;
                 el.bigTitle.style.opacity = '0.3';
             });
-            btn.addEventListener('click', () => openMood(mood.key));
+
+            /* 📱 موبايل: كبسة طويلة تظهر الصورة */
+            let longPressTimer = null;
+            let didLongPress = false;
+
+            btn.addEventListener('touchstart', function () {
+                didLongPress = false;
+                clearTimeout(longPressTimer);
+                longPressTimer = setTimeout(function () {
+                    didLongPress = true;
+                    setBackground(mood, false);
+                    el.bigTitle.textContent = mood.label;
+                    el.bigTitle.style.opacity = '0.3';
+                    /* اهتزاز خفيف للإحساس */
+                    if (navigator.vibrate) {
+                        try { navigator.vibrate(30); } catch (e) {}
+                    }
+                }, 350);
+            }, { passive: true });
+
+            btn.addEventListener('touchend', function () {
+                clearTimeout(longPressTimer);
+                if (didLongPress) {
+                    /* أخفي المعاينة بعد 2.5 ثانية */
+                    setTimeout(function () {
+                        el.bg.classList.remove('show');
+                        el.bigTitle.textContent = 'MOUDY';
+                        el.bigTitle.style.opacity = '0.12';
+                    }, 2500);
+                }
+            });
+
+            btn.addEventListener('touchcancel', function () {
+                clearTimeout(longPressTimer);
+                didLongPress = false;
+            });
+
+            btn.addEventListener('click', function (e) {
+                /* إذا كبسة طويلة → ما تفتح المود */
+                if (didLongPress) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    return;
+                }
+                openMood(mood.key);
+            });
+
             li.appendChild(btn);
             el.list.appendChild(li);
         });
+
         el.menu.addEventListener('mouseleave', () => {
             el.bg.classList.remove('show');
             el.bigTitle.textContent = 'MOUDY';
@@ -9578,10 +9627,22 @@ if (window.moudyPoints) {
    (function initInstallButton() {
 
     if (document.body.classList.contains('LOGIN-PAGE')) return;
-    if (window.matchMedia('(display-mode: standalone)').matches) return;
-    if (window.navigator.standalone === true) return;
-    if (document.querySelector('.pwa-install-fab')) return;
 
+    /* ما نعرضو إذا التطبيق مثبّت */
+    var isStandalone = window.matchMedia('(display-mode: standalone)').matches ||
+                       window.matchMedia('(display-mode: fullscreen)').matches ||
+                       window.matchMedia('(display-mode: minimal-ui)').matches ||
+                       window.navigator.standalone === true ||
+                       document.referrer.indexOf('android-app://') > -1;
+    if (isStandalone) return;
+
+    /* ما نعرضو إذا المستخدم رفض من قبل */
+    try {
+        var hiddenTime = localStorage.getItem('pwa-hidden');
+        if (hiddenTime && Date.now() - Number(hiddenTime) < 30 * 24 * 60 * 60 * 1000) return;
+    } catch (e) {}
+
+    if (document.querySelector('.pwa-install-fab')) return;
     var deferredPrompt = null;
     var isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
@@ -9594,8 +9655,8 @@ if (window.moudyPoints) {
     window.addEventListener('appinstalled', function () {
         var btn = document.querySelector('.pwa-install-fab');
         if (btn) btn.remove();
+        try { localStorage.setItem('pwa-hidden', Date.now().toString()); } catch (e) {}
     });
-
     var fab = document.createElement('button');
     fab.type = 'button';
     fab.className = 'pwa-install-fab';
@@ -9664,6 +9725,12 @@ if (window.moudyPoints) {
             if (e.target === modal) close();
         });
     }
+        /* إخفاء بعد 3 ثواني إذا ما تفاعل */
+        setTimeout(function () {
+            if (fab && fab.parentElement && !localStorage.getItem('pwa-hidden')) {
+                fab.style.display = 'none';
+            }
+        }, 20000);
 
 })();
 
