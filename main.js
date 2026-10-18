@@ -637,8 +637,8 @@ const SONGS = [
    ================================================================== */
 /* ======= PHOTOS-DATA-START ======= */
 const PHOTOS = [
-    { file: '1.jpg', w: 148, h: 148 },
-    { file: '10.jpg', w: 320, h: 180 },
+ 
+
     { file: '100.jpg', w: 1440, h: 1440 },
     { file: '101.jpg', w: 1440, h: 1440 },
     { file: '102.jpg', w: 1440, h: 1440 },
@@ -647,20 +647,20 @@ const PHOTOS = [
     { file: '105.jpg', w: 1440, h: 1440 },
     { file: '106.jpg', w: 1440, h: 1440 },
     { file: '107.jpg', w: 1440, h: 1440 },
-    { file: '108.jpg', w: 1080, h: 720 },
+ 
     { file: '109.jpg', w: 1440, h: 1440 },
-    { file: '11.jpg', w: 738, h: 414 },
+   
     { file: '110.jpg', w: 1341, h: 1336 },
-    { file: '111.jpg', w: 1080, h: 1080 },
+  
     { file: '112.jpg', w: 1280, h: 1280 },
     { file: '113.jpg', w: 1280, h: 1280 },
     { file: '114.jpg', w: 1440, h: 1440 },
-    { file: '115.jpg', w: 1080, h: 1080 },
+  
     { file: '116.jpg', w: 1080, h: 1080 },
     { file: '117.jpg', w: 1080, h: 1080 },
     { file: '118.jpg', w: 1080, h: 1080 },
     { file: '119.jpg', w: 1440, h: 1440 },
-    { file: '12.jpg', w: 447, h: 447 },
+  
     { file: '120.jpg', w: 1440, h: 1440 },
     { file: '121.jpg', w: 1440, h: 1440 },
     { file: '123.jpg', w: 1440, h: 1800 },
@@ -670,7 +670,7 @@ const PHOTOS = [
     { file: '127.jpg', w: 2227, h: 2226 },
     { file: '128.jpg', w: 3024, h: 3023 },
     { file: '129.jpg', w: 3024, h: 3023 },
-    { file: '13.jpg', w: 300, h: 300 },
+   
     { file: '130.jpg', w: 2316, h: 2315 },
     { file: '131.jpg', w: 3024, h: 3023 },
     { file: '132.jpg', w: 3024, h: 3023 },
@@ -681,7 +681,7 @@ const PHOTOS = [
     { file: '137.jpg', w: 1440, h: 1440 },
     { file: '138.jpg', w: 2268, h: 2268 },
     { file: '139.jpg', w: 1601, h: 1601 },
-    { file: '14.jpg', w: 240, h: 240 },
+
     { file: '140.jpg', w: 2268, h: 2268 },
     { file: '141.jpg', w: 2268, h: 2268 },
     { file: '142.jpg', w: 4096, h: 4095 },
@@ -697,7 +697,7 @@ const PHOTOS = [
     { file: '152.jpg', w: 1440, h: 1440 },
     { file: '153.jpg', w: 1068, h: 713 },
     { file: '154.jpg', w: 1068, h: 713 },
-    { file: '16.jpg', w: 459, h: 668 },
+ 
     { file: '17.jpg', w: 1440, h: 1440 },
     { file: '18.jpg', w: 1440, h: 1440 },
     { file: '19.jpg', w: 1440, h: 1136 },
@@ -712,7 +712,7 @@ const PHOTOS = [
     { file: '27.jpg', w: 1440, h: 812 },
     { file: '28.jpg', w: 1440, h: 1436 },
     { file: '29.jpg', w: 1440, h: 1800 },
-    { file: '3.jpg', w: 1080, h: 1080 },
+  
     { file: '30.jpg', w: 1440, h: 1439 },
     { file: '31.jpg', w: 1440, h: 1440 },
     { file: '32.jpg', w: 1440, h: 1439 },
@@ -732,7 +732,7 @@ const PHOTOS = [
     { file: '47.jpg', w: 1440, h: 1440 },
     { file: '48.jpg', w: 1440, h: 1440 },
     { file: '49.jpg', w: 1440, h: 1440 },
-    { file: '5.jpg', w: 300, h: 200 },
+  
     { file: '50.jpg', w: 1440, h: 894 },
     { file: '51.jpg', w: 1440, h: 1440 },
     { file: '52.jpg', w: 1440, h: 1440 },
@@ -744,7 +744,7 @@ const PHOTOS = [
     { file: '58.jpg', w: 1440, h: 1440 },
     { file: '59.jpg', w: 1440, h: 1440 },
     { file: '6_‫‬.jpg', w: 447, h: 447 },
-    { file: '6.jpg', w: 1440, h: 1433 },
+ 
     { file: '60.jpg', w: 1440, h: 1440 },
     { file: '61.jpg', w: 1440, h: 1440 },
     { file: '62.jpg', w: 1440, h: 1440 },
@@ -755,21 +755,21 @@ const PHOTOS = [
     { file: '67.jpg', w: 1440, h: 1440 },
     { file: '68.jpg', w: 1440, h: 1440 },
     { file: '69.jpg', w: 1440, h: 1440 },
-    { file: '7.jpg', w: 225, h: 225 },
+    
     { file: '70.jpg', w: 1440, h: 1440 },
     { file: '71.jpg', w: 1440, h: 960 },
     { file: '72.jpg', w: 1440, h: 1440 },
     { file: '73.jpg', w: 1440, h: 1440 },
     { file: '78.jpg', w: 1440, h: 1440 },
     { file: '79.jpg', w: 1440, h: 1440 },
-    { file: '8.jpg', w: 495, h: 404 },
+
     { file: '80.jpg', w: 1440, h: 1440 },
     { file: '81.jpg', w: 1440, h: 1439 },
     { file: '82.jpg', w: 1440, h: 1440 },
     { file: '83.jpg', w: 1440, h: 1440 },
     { file: '84.jpg', w: 1440, h: 1626 },
     { file: '89.jpg', w: 1440, h: 1626 },
-    { file: '9.jpg', w: 447, h: 447 },
+   
     { file: '90.jpg', w: 1440, h: 1440 },
     { file: '91.jpg', w: 1440, h: 1440 },
     { file: '92.jpg', w: 1440, h: 1440 },
@@ -780,10 +780,10 @@ const PHOTOS = [
     { file: '97.jpg', w: 1440, h: 1440 },
     { file: '98.jpg', w: 1440, h: 1440 },
     { file: '99.jpg', w: 1440, h: 1440 },
-    { file: 'images_(1).jpeg', w: 225, h: 225 },
+ 
     { file: 'images_(10).jpeg', w: 480, h: 360 },
     { file: 'images_(11).jpeg', w: 300, h: 300 },
-    { file: 'images_(12).jpeg', w: 447, h: 447 },
+  
     { file: 'images_(7).jpeg', w: 240, h: 240 },
     { file: 'images_(8).jpeg', w: 447, h: 447 },
     { file: 'images_(9).jpeg', w: 447, h: 447 },
