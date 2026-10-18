@@ -115,7 +115,7 @@ const SONGS = [
     { title: 'امشي', id: 'DAeBhOvDgwo', moods: ['passion'] },
     { title: 'تركتا', id: 'YgokxJm9xi4', moods: [] },
     { title: 'الحبيبة', id: 'hZZY-7xaOH8', moods: [] },
-    { title: 'مصاب', id: 'lRawQ3TGnTM', moods: ['feat'] },
+
     { title: 'غلط', id: 'zj9TFooEhI4', moods: ['passion'] },
     { title: 'مانو معاشر', id: 'DG_2LDpGymQ', moods: ['passion'] },
     { title: 'تسع ساعات', id: 'T9eKYqcYadY', moods: ['calm', 'passion'] },
@@ -125,7 +125,7 @@ const SONGS = [
     { title: 'اعتراف نفسي', id: 'iohCJ5WqiI8', moods: ['calm', 'passion'] },
     { title: 'تتذكر', id: 'Rd8YaaRIqGs', moods: ['calm'] },
     { title: 'اشتقتلي', id: 'dho_69-1BJM', moods: ['calm'] },
-    { title: 'مسلمين وكفار', id: '1UzbKWiq1Fo', moods: ['hadef', 'syrian'] },
+
     { title: 'راضي بكلشي صار', id: 'e3R9XXpmsEM', moods: ['calm'] },
     { title: 'اركي', id: 'cQTx-kFPn-M', moods: ['feat'] },
     { title: 'مامليت', id: '4iXsErw8Po8', moods: ['feat'] },
@@ -1993,7 +1993,7 @@ const PHOTOS = [
         { title: 'اعتراف نفسي', id: 'iohCJ5WqiI8' },
         { title: 'تتذكر', id: 'Rd8YaaRIqGs' },
         { title: 'اشتقتلي', id: 'dho_69-1BJM' },
-        { title: 'مسلمين وكفار', id: '1UzbKWiq1Fo' },
+ 
         { title: 'راضي بكلشي صار', id: 'e3R9XXpmsEM' },
         { title: 'اركي', id: 'cQTx-kFPn-M' },
         { title: 'مامليت', id: '4iXsErw8Po8' },
@@ -3796,7 +3796,7 @@ const PHOTOS = [
                 { song: 'امشي', words: ['امن', 'بنفسك', 'رح', 'ترفع', 'ايمانك'] },
                 { song: 'اعتراف نفسي', words: ['لست', 'أخاف', 'أياماً', 'عصيبه'] },
                 { song: 'طمنيني', words: ['بكون', 'كذاب', 'لو', 'ما', 'قلت'] },
-                { song: 'مصاب', words: ['الدنية', 'درس', 'أنا', 'بكتب'] },
+             
                 { song: 'الغُربة', words: ['فين', 'نرجع', 'لبلادي', 'ومسروقه'] },
                 { song: 'وسط النيل', words: ['الرصاصة', 'اخرا', 'رح', 'تصيب'] }
             ]
@@ -4262,13 +4262,13 @@ if (window.moudyPoints) {
             pick: 12,
             questions: [
                 { line: 'نت متل الساعة الروليكس\nلكنك فيك', answer: 'روليكس', wrong: ['نوبة', 'كارما', 'تروما'], id: 'wX6Kt90z-eM' },
-                { line: 'جرحت أيدي بدي كون مصاب\nماعاد فيني تلفت الأعصاب', answer: 'مصاب', wrong: ['مسلول', 'مونستر', 'ميت 2'], id: 'lRawQ3TGnTM' },
+               
                 { line: 'قدام العالم بصريح العبارة\nهاد اسمو تهديد', answer: 'تهديد', wrong: ['تحذير', 'وعيد', 'كلام'], id: 'p7yevyd3pI8' },
                 { line: 'الكلاب تعوي والقافلة تسير\nبس اوقات في كلاب بتجبرك', answer: 'الأرض السعيدة', wrong: ['طريق الخراب', 'الغُربة', 'بفوضى'], id: 'wyKXeeIeYHg' },
                 { line: 'شكلو زهايمر نسيتي\nبعدك بالأرض', answer: 'زهايمر', wrong: ['نساني', 'نسيتا', 'تتذكر'], id: 'ZRj9gQGYo-I' },
                 { line: 'بطفي الضو لتحكي العتمه\nواقنع حالي اني نايم فاتح عين', answer: 'نص الليل', wrong: ['الطير', 'خطاف', 'نجم ليل'], id: 'Jb_fQCaQpBA' },
                 { line: 'تاركها بكرى الكارما بتربيها\nبكرى الدنيا بتصحيها', answer: 'كارما', wrong: ['نساني', 'تركتا', 'غلط'], id: 'm4Hz03O9MJ4' },
-                { line: 'لما بيغيب السبع بتفلت الضباع\nهبوط اضطراري', answer: 'يا صبر الله', wrong: ['مسلمين وكفار', '7 طلقات', '14 ونص'], id: 'Zpu7Iy12CjM' },
+                { line: 'لما بيغيب السبع بتفلت الضباع\nهبوط اضطراري', answer: 'يا صبر الله', wrong: ['مسلول', '7 طلقات', '14 ونص'], id: 'Zpu7Iy12CjM' },
                 { line: 'لو جاي في رجوع نساني\nشوفلك موضوع تاني', answer: 'نساني', wrong: ['تركتا', 'نسيتا', 'غلط'], id: '2Z-Glm-sEdQ' },
                 { line: 'امن بنفسك رح ترفع ايمانك\nحارب لتبقى', answer: 'امشي', wrong: ['كفاحي', 'قد التحدي', 'فلسفة'], id: 'DAeBhOvDgwo' },
                 { line: 'حياة كل انسان هي عبارة عن كتاب\nاله صفحات كتيره ما بتخلص', answer: 'صراع نفسي', wrong: ['اعتراف نفسي', 'فلسفة', 'ميت 2'], id: 'h_-zk23w5co' },
@@ -6797,7 +6797,7 @@ if (window.moudyPoints) {
         { id: 'song_79', title: 'مافي قضية',         file: 'song_79.mp3' },
         { id: 'song_80', title: 'مانو معاشر',        file: 'song_80.mp3' },
         { id: 'song_81', title: 'ماهر (اسكوبار)',    file: 'song_81.mp3' },
-        { id: 'song_82', title: 'مسلمين وكفار',      file: 'song_82.mp3' },
+   
         { id: 'song_83', title: 'ميت',               file: 'song_83.mp3' },
         { id: 'song_84', title: 'حكي كتير',          file: 'song_84.mp3' },
         { id: 'song_85', title: 'هوس',               file: 'song_85.mp3' },
